@@ -12,17 +12,17 @@ body {
 }
 
 div {
-	width:350px;  
-    height:300px;  
+	width:450px;  
+    height:400px;  
     position:absolute;  
-    left:50%;  
-    top:50%;  
+    left:45%;  
+    top:45%;  
     margin:-100px 0 0 -150px
 }
 
 h1 {
     margin-top: 0;
-    font-size: 3.2em;
+    font-size: 3.7em;
     line-height: 1.2em;
     letter-spacing: .05em; 
     color: white;
@@ -30,7 +30,7 @@ h1 {
 }
 
 p {
-	font-size: 30px;
+	font-size: 40px;
 	text-align: center;
 	color: white;
 }
@@ -38,14 +38,16 @@ p {
 a {
 	display: block;
     position: relative;
+    font-size: 20px;
     border-color: #FFF;
     color: #FFF;
     opacity: .8; 
+    text-decoration: none;
 }
 
 ol, ul {
     text-align: center;
-    margin-left: 50px;
+    margin-left: 65px;
     list-style: none;
     outside: none; 
     float: left;
@@ -53,8 +55,8 @@ ol, ul {
 }
 
 #bt{                           
-    background-color: blue; 
-    -webkit-border-radius:50%;
+    background-color: #000000; 
+    -webkit-border-radius: 50%;
 } 
 
 ol li, ul li {
