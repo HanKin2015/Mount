@@ -80,3 +80,16 @@ a:active{
 span{
 	color: white;
 }
+
+#itop {
+	margin-top: 30px;
+}
+
+#stop {
+	margin-top: 30px;
+	background-color: blue;
+	width: 100%;
+	height: 40px;
+
+}
+
