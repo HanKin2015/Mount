@@ -1,0 +1,63 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form name="testform" action="jsref_onsubmit.asp" onsubmit="alert('Hello ' + testform.fname.value +'!')">
+
+	What is your name?<br/>
+	<input type="text" name="fname" />
+	<input type="submit" value="Submit" />
+
+	</form>
+</body>
+</html> -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 
+Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-
+transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>123</title>
+<meta http-equiv="Content-Type" content="text/html; 
+charset=utf-8">
+<style>
+<!--
+.b{
+position:absolute;
+left:0;
+top:0;
+width:200px;
+height:100px;
+color:#fff;
+background:#000;
+}
+-->
+</style>
+</head>
+<body>
+<div id="d2">
+<form name="myform" action="#">
+name:<input type="text" name="name">
+age:<input type="text" name="age">
+<input type="button" id="but" value="ok";>
+</form>
+</div>
+<div id="d1" class="b" style="display:none;">asdf</div>
+</body>
+<script>
+function aaaaa(){
+var name=document.myform.name.value;
+var age=document.myform.age.value;
+document.getElementById
+("d1").style.display="";
+document.getElementById
+("d2").style.display="none";
+document.getElementById
+("d1").innerHTML="name:"+name+"<br>age:"+age;
+}
+document.getElementById("but").onclick = aaaaa;
+</script>
+</html>

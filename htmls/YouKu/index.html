@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>hi!优酷</title>
+		<meta charset="utf-8"/>
+		<meta name="title" content="何健2133621的视频网站"/>
+		<meta name="keywords" content="何健,2133621,视频,网站" />
+		<meta name="description" content="视频服务平台,提供视频播放,视频发布,视频搜索,视频分享" />
+		<link type="text/css" href="css/style.css" rel="stylesheet">
+		<link type="text/css" href="css/dialog.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div id="all">
+		<div id="title">
+			<div id="logo">
+				<a href="index.html"><img src="images/logo.jpg" width="300px" height="120px"></a>
+			</div>
+
+			<div id="title-center">
+				<ul>
+					<li><a>首页</a></li>
+					<li><a>发现</a></li>
+					<li><a>订阅</a></li>
+					<li><a>会员</a></li>
+					<li><a id="my">我的</a></li>
+				</ul>
+			</div>
+
+			<div id="search">
+				<input type="text" placeholder="input your video">
+                <a href="http://index.youku.com/rank_top/">
+				<button type="submit">搜库</button></a>
+			</div>
+			
+			<div id="user">
+				<!--jsp:param name="username" value="#session['user'].username"/-->
+				<a href="#" id="username">何健</a>
+			</div>
+
+			<div id="login_and_register">
+				<a href="#" id="login" onclick="showid('login_dialog')">登录</a>
+				<div id="login_dialog">
+						<div class="top">
+							<a href="#" title="关闭" onclick="$('#login_dialog').hide();$('div#layer').remove();">X</a>
+						</div>
+						
+						<form action="login_action">
+						<div class="login_main">
+							账号：<input type="text" placeholder="input your userid" name="user.username"/> <br><br>
+							密码：<input type="password" placeholder="input your password" name="user.password"/> <br><br>
+							<button class="btn">登录</button>
+						</div>
+						</form>
+				</div>
+
+				<a href="#" id="register" onclick="showid('register_dialog')">注册</a>
+				<div id="register_dialog">
+						<div class="top">
+							<a href="#" title="关闭" onclick="$('#register_dialog').hide();$('div#layer').remove();">X</a>
+						</div>
+						
+						<form action="register_action">
+						<div class="register_main">
+							账号：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<input type="text" placeholder="input your userid" name="newuser.username"/> <br><br>
+							密码：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<input type="password" placeholder="input your password" name="newuser.password"/> <br><br>
+							确认密码：<input type="password" placeholder="ensure your password"/> <br><br>
+							邮箱地址：<input type="text" placeholder="input your email"/> <br><br>
+							<button class="btn">注册</button>
+						</div>
+						</form>
+				</div>
+			</div>
+
+		</div>
+	
+		<div id="head">
+			<hr>
+			<ul class="head-main">
+		          <li ><a href="#">首页</a></li>
+		          <li ><a href="#">电视剧</a></li>
+		          <li ><a href="#">电影</a></li>
+		          <li ><a href="#">综艺</a></li>
+		          <li ><a href="#">音乐</a></li>
+		          <li ><a href="#">少儿</a></li>
+		          <li ><a href="#">来疯</a></li>
+		          <li ><a href="#">全部</a></li>
+		          <li ><a href="#">资讯</a></li>
+		          <li ><a href="#">拍客</a></li>
+		          <li ><a href="#">纪录片</a></li>
+		          <li ><a href="#">公益</a></li>
+		          <li ><a href="#">体育</a></li>
+		          <li ><a href="#">汽车</a></li>
+		          <li ><a href="#">科技</a></li>
+		          <li ><a href="#">财经</a></li>
+		          <li ><a href="#">娱乐</a></li>
+		          <li ><a href="#">原创</a></li>
+		          <li ><a href="#">动漫</a></li>
+		          <li ><a href="#">搞笑</a></li>
+		          <li ><a href="#">旅游</a></li>
+		          <li ><a href="#">时尚</a></li>
+		          <li ><a href="#">亲子</a></li>
+		          <li ><a href="#">教育</a></li>
+		          <li ><a href="#">游戏</a></li>
+		          <li ><a href="#">直播</a></li>
+		        </ul>
+		</div>
+
+		<div id="content">
+			<hr>
+			<div id="video-main-list">
+				<div class="big">
+					<a href="#" onclick="showid('showvideo1');">
+						<img src="images/img.jpg" width="500px" height="345px"/>
+							<div class="con">火影忍者，震撼来袭</div>
+					</a>
+
+					<div class="myvideo" id="showvideo1">
+						<div class="top">
+							<a href="#" title="关闭" onclick="$('#showvideo1').hide();$('div#layer').remove();">X</a>
+						</div>
+						
+						<div class="video">
+							<embed src="http://player.youku.com/player.php/sid/XNTQwMTgxMTE2/v.swf" quality="high" width="480px" height="368px" align="middle" allowScriptAccess="always" allowFullScreen="true" mode="transparent" type="application/x-shockwave-flash"></embed>
+						</div>
+					</div>
+				</div>
+				
+				<div class="little">
+					<a href="#" onclick="showid('showvideo');">
+						<img src="images/1.jpg" width="200px" height="150px"/>
+					</a>
+					<div class="myvideo" id="showvideo">
+						<div class="top">
+							<a href="#" title="关闭" onclick="$('#showvideo').hide();$('div#layer').remove();">X</a>
+						</div>
+						
+						<div class="video">
+							<video src="videos/video.mp4"  width="480px" height="368px"type="video/mp4" controls></embed>
+						</div>
+					</div>
+				</div>
+				<div class="little">
+					<a href="#" onclick="showid('showvideo');">
+						<img src="images/2.jpg" width="200px" height="150px"/>
+					</a>
+				</div>
+				<div class="little">
+					<a href="#" onclick="showid('showvideo');">
+						<img src="images/3.jpg" width="200px" height="150px"/>
+					</a>
+				</div>
+				<div class="little">
+					<a href="#" onclick="showid('showvideo');">
+						<img src="images/4.jpg" width="200px" height="150px"/>
+					</a>
+				</div>
+				<div class="little">
+					<a href="#" onclick="showid('showvideo');">
+						<img src="images/5.jpg" width="200px" height="150px"/>
+					</a>
+				</div>
+				<div class="little">
+					<a href="#" onclick="showid('showvideo');">
+						<img src="images/6.jpg" width="200px" height="150px"/>
+					</a>
+				</div>
+			</div>
+			<div id="video-hot-list">
+				<div class="little">
+					<a href="#" onclick="showid('showvideo');">
+						<img src="images/7.jpg" width="200px" height="150px"/>
+					</a>
+				</div>
+				<div class="little">
+					<a href="#" onclick="showid('showvideo');">
+						<img src="images/8.jpg" width="200px" height="150px"/>
+					</a>
+				</div>
+				<div class="little">
+					<a href="#" onclick="showid('showvideo');">
+						<img src="images/9.jpg" width="200px" height="150px"/>
+					</a>
+				</div>
+				<div class="little">
+					<a href="#" onclick="showid('showvideo');">
+						<img src="images/10.jpg" width="200px" height="150px"/>
+					</a>
+				</div>
+				<div class="little">
+					<a href="#" onclick="showid('showvideo');">
+						<img src="images/11.jpg" width="200px" height="150px"/>					</a>
+				</div>
+				
+			</div>
+		</div>
+		<div id="tail">
+			<hr>
+			<p id="p_position">2133621何健 | 东北大学秦皇岛分校</p>
+			<p>反盗版和反盗链权利声明    Copyright © 2016 HanKin All Rights Reserved</p>
+		</div>
+
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/show.js"></script>
+		<script type="text/javascript" src="js/myself.js"></script>
+		<script type="text/javascript">
+			window.onload=function ()
+			{
+			    var ply=document.getElementById("username");
+			    var btn=document.getElementById("my");
+			     
+			    btn.onclick=function ()
+			    {
+			    	if(ply.style.visibility=="hidden")
+			        	ply.style.visibility="visible";
+			        else
+			        	ply.style.visibility="hidden";
+			    }
+			}
+		</script>
+	</body>
+</html>
