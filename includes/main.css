@@ -47,7 +47,7 @@ a {
 
 ol, ul {
     text-align: center;
-    margin-left: 65px;
+    margin-left: 15px;
     list-style: none;
     outside: none; 
     float: left;
@@ -69,5 +69,9 @@ ol li, ul li {
 }
 ol ol, ol ul, ul ol, ul ul {
     margin: .1em 0 .2em 2em; 
+}
+
+#myimage {
+    margin-top: 20px;
 }
 
