@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title></title>
+</head>
+<body>
+	<canvas id="canvas" width="800" height="500" style="border:1px solid #aaa; display:block; margin:50px auto;">浏览器不支持</canvas>
+
+	<script type="text/javascript">
+		var WINDOW_WIDTH = 800;
+		var WINDOW_HEIGHT = 500;
+		var RADIUS = 8;
+		var ball={x:750, y:50, g:2, vx:-5, vy:-10, color:"red"};
+		window.onload = function(){
+
+    		var canvas = document.getElementById("canvas");
+
+   			var context = canvas.getContext("2d");
+    		canvas.width = WINDOW_WIDTH;
+   			canvas.height = WINDOW_HEIGHT;
+
+		    setInterval(
+		        function(){
+		            render( context);
+		            update();
+		        }
+		        ,
+		        50
+		    );
+		}
+
+		function update(){
+			ball.x+=ball.vx;
+			ball.y+=ball.vy;
+			ball.vy+=ball.g;
+
+			if(ball.y>=500-RADIUS){
+				ball.y=500-RADIUS;
+				ball.vy=-ball.vy*0.5;
+			}
+			//if(ball.y<=RADIUS) ball.vy=-ball.vy;
+			//if(ball.x>=800-RADIUS) ball.vx=-ball.vx;
+			//if(ball.x<=RADIUS) ball.vx=-ball.vx;
+		}
+
+		function render(cxt){
+			cxt.clearRect(0,0,cxt.canvas.width,cxt.canvas.height);
+			cxt.beginPath();
+            cxt.arc( ball.x, ball.y , RADIUS , 0 , 2*Math.PI );
+            cxt.closePath();
+            cxt.fillStyle="red";
+            cxt.fill();
+		}
+	</script>
+</body>
+</html>
